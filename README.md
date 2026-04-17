@@ -105,42 +105,43 @@ sudo dmesg | tail -5
 *Two containers alpha and beta started and running under one supervisor process*
 
 ### Screenshot 2 — Metadata tracking
-<img width="1129" height="122" alt="WhatsApp Image 2026-04-17 at 12 44 58 AM" src="https://github.com/user-attachments/assets/f04dad45-cccf-402c-8b90-9a5d0e3aa627" />
+<img width="1129" height="122" alt="image" src="https://github.com/user-attachments/assets/3ace637e-dffd-41cb-a18f-bc45fbfbf806" />
 
 *ps command showing container ID, PID, STATE, SOFT and HARD memory limits*
 
 ### Screenshot 3 — Bounded-buffer logging
-<img width="1129" height="122" alt="WhatsApp Image 2026-04-17 at 12 44 58 AM" src="https://github.com/user-attachments/assets/2cef72b3-80aa-49fb-a190-04bd801474c3" />
+<img width="1127" height="236" alt="image" src="https://github.com/user-attachments/assets/01450306-cf5b-4969-96df-a4fa9f90459f" />
 
 *Log file contents of alpha container captured through the logging pipeline*
 
 ### Screenshot 4 — CLI and IPC
-<img width="1129" height="122" alt="WhatsApp Image 2026-04-17 at 12 44 58 AM" src="https://github.com/user-attachments/assets/2a5aa227-be7d-469e-aef8-000c35f47b25" />
+<img width="1220" height="100" alt="image" src="https://github.com/user-attachments/assets/6bd87da4-16f1-49e1-ab60-3acf7f5d37e5" />
 
 *stop command sent to supervisor via UNIX domain socket, supervisor responds with SIGTERM confirmation*
 
 ### Screenshot 5 — Soft-limit warning
-<img width="1129" height="122" alt="WhatsApp Image 2026-04-17 at 12 44 58 AM" src="https://github.com/user-attachments/assets/021f72a5-7ef3-4c8b-80c1-632da1781fc4" />
+<img width="1040" height="29" alt="image" src="https://github.com/user-attachments/assets/980ba7f7-e1fd-4dae-b3b0-2009f11490f3" />
 
 *dmesg showing SOFT LIMIT warning when memtest exceeded 20MiB*
 
 ### Screenshot 6 — Hard-limit enforcement
-<img width="1129" height="122" alt="WhatsApp Image 2026-04-17 at 12 44 58 AM" src="https://github.com/user-attachments/assets/aac7a4c2-dcba-4af4-bb51-917faeeb6f6c" />
+<img width="1040" height="151" alt="image" src="https://github.com/user-attachments/assets/1772d6c2-0519-4845-9909-1cf0b82dd1f9" />
 
 *dmesg showing HARD LIMIT kill when memtest exceeded 40MiB, ps shows killed state*
 
 ### Screenshot 7a — Scheduling experiment (cpu-high log)
-<img width="1204" height="519" alt="image" src="https://github.com/user-attachments/assets/45771b6a-c81e-4986-bfcf-7d46d5690ebc" />
+<img width="1204" height="519" alt="image" src="https://github.com/user-attachments/assets/ed7f8f3c-b662-4c29-ba21-9d86df3fd21c" />
 
 *cpu-high container running with nice 0, full CFS weight*
 
 ### Screenshot 7b — Scheduling experiment (cpu-low log)
-<img width="1204" height="519" alt="image" src="https://github.com/user-attachments/assets/1b1caf7d-401f-4e45-929e-1b446f8fdf05" />
+<img width="1204" height="450" alt="image" src="https://github.com/user-attachments/assets/d5cf213b-ecd4-400e-bfc0-41aa3541921f" />
 
 *cpu-low container running with nice 10, reduced CFS weight*
 
 ### Screenshot 8 — Clean teardown
-<img width="1204" height="519" alt="image" src="https://github.com/user-attachments/assets/2567ee86-5712-4d0b-9c97-36daebc1806d" />
+<img width="1207" height="429" alt="image" src="https://github.com/user-attachments/assets/8e0dadbc-6fe0-4162-97f5-0a6a6a02b71e" />
+
 
 *No zombie processes, all containers reaped, kernel module unloaded cleanly*
 
